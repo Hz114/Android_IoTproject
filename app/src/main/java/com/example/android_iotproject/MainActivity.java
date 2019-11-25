@@ -2,6 +2,7 @@ package com.example.android_iotproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button stopButton;
+    Button scanButton;
     boolean btnDefault = true;
     boolean btnState = false;
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         stopButton = (Button) findViewById(R.id.stopBtn);
+        scanButton = (Button) findViewById(R.id.scanBtn);
 
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
 
                  }
                  */
+            }
+        });
+
+        scanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public  void onClick(View v){
+                //버스 리스트 목록으로 이동한다
+                Intent intent = new Intent(getApplicationContext(), BusListActivity.class);
+                startActivity(intent);
             }
         });
     }
