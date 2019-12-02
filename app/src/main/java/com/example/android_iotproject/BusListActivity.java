@@ -37,12 +37,12 @@ public class BusListActivity extends AppCompatActivity {
         /* List에 item을 추가하는 방법 */
         bus_icon = (Drawable) ContextCompat.getDrawable(mContext, R.drawable.ic_bus);
         busNum = "750A";
-        busTime = "10분";
+        busTime = "비콘주소";
         adapter.addItem(bus_icon, busNum, busTime);
 
         bus_icon = (Drawable) ContextCompat.getDrawable(mContext, R.drawable.ic_bus);
         busNum = "470";
-        busTime = "3분";
+        busTime = "비콘주소";
         adapter.addItem(bus_icon, busNum, busTime);
 
         /* 바뀐 값으로 list를 업데이트 한다 */
